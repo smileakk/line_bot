@@ -38,6 +38,11 @@ def handle_message(event): # event.message.text 使用者輸入內容
     if event.message.text == '你好':
         message = TextSendMessage(text=f"幹你娘\n時間{datetime.datetime.now()}") # bot return the Message to User
         line_bot_api.reply_message(event.reply_token, message) 
+        
+    if event.message.text == '您好':
+        message = TextSendMessage(text=f"幹你娘\n時間{datetime.datetime.now()}") # bot return the Message to User
+        line_bot_api.reply_message(event.reply_token, message) 
+
 
 import os
 if __name__ == "__main__":
